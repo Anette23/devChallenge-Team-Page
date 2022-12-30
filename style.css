@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --main-color: #000000;
+  --footer-color: #a9a9a9;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: var(--main-color);
+}
+
+.grid {
+  max-width: 1440px;
+  height: 100vh;
+  padding: 3.5rem 1rem 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-family: "PT Serif", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.header .header-content h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.header .header-content p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 21px;
+  max-width: 27.4375rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  display: flex;
+  gap: 0.5rem;
+  width: 138px;
+  height: 260px;
+}
+
+.card:nth-of-type(even) {
+  padding-top: 2rem;
+}
+
+.card-image figcaption {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.card-info h3 {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-transform: uppercase;
+  font-family: "PT Serif", serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: var(--footer-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer span {
+  font-weight: 700;
+}
+
+.footer-link {
+  color: var(--footer-color);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 500px) {
+  .card-container {
+    gap: 2rem;
+  }
+
+  .card {
+    width: 238px;
+    height: 420px;
+  }
+}
+
+@media (min-width: 800px) {
+  .grid {
+    padding: 4rem;
+    justify-content: center;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10rem;
+    margin-bottom: 5rem;
+  }
+
+  .header .header-content p {
+    font-size: 1.125rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card.card:nth-of-type(2),
+  .card.card:nth-of-type(5) {
+    padding-top: 5rem;
+  }
+
+  .card-info h3 {
+    font-size: 0.75rem;
+  }
+
+  .card-image figcaption {
+    font-size: 1.125rem;
+  }
+}
